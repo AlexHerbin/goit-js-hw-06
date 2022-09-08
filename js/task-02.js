@@ -17,10 +17,15 @@ const listEl = document.querySelector('#ingredients');
 //   listEl.appendChild(ingredientEl)
 // });
 
+const ingredientsEl = []
+
 ingredients.map(ingredient => { 
     const ingredientEl = document.createElement('li');
     ingredientEl.classList.add('item');
     ingredientEl.textContent = ingredient;
-    console.log(ingredientEl);
-    listEl.appendChild(ingredientEl)
+    // console.log(ingredientEl);
+    ingredientsEl.push(ingredientEl);
  });
+
+// console.log(ingredientsEl);
+listEl.append(...ingredientsEl)
